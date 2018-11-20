@@ -1,3 +1,15 @@
-<app-side-bar></app-side-bar>
+<div class="container">
+  app component
 
-<app-side-bar-toggle></app-side-bar-toggle>
+  <!-- By Passing Reference Of One Component To Another -->
+  <!--
+    <app-side-bar #sidebar></app-side-bar>
+    <app-side-bar-toggle [sidebar]="sidebar"></app-side-bar-toggle>
+  -->
+
+  <!-- Communication Through Parent Component -->
+  <app-side-bar [isOpen]="sideBarIsOpened"></app-side-bar>
+  <app-side-bar-toggle (toggle)="toggleSideBar()"></app-side-bar-toggle>
+
+  <button (click)="toggleSideBar()">Toggle SideBar</button>
+</div>

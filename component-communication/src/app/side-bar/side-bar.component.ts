@@ -1,15 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, Input } from '@angular/core';
 
 @Component({
   selector: 'app-side-bar',
   templateUrl: './side-bar.component.html',
   styleUrls: ['./side-bar.component.css']
 })
-export class SideBarComponent implements OnInit {
+export class SideBarComponent {
+  // Communication Through Parent Component
+  @HostBinding('class.is-open')
+  @Input()
+  isOpen = false;
 
-  constructor() { }
+  // By Passing Reference Of One Component To Another
+  // @HostBinding('class.is-open')
+  // isOpen = false;
 
-  ngOnInit() {
-  }
-
+  // toggle() {
+  //   this.isOpen = !this.isOpen;
+  // }
 }
