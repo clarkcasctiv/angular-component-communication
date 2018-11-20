@@ -16,7 +16,6 @@ import { SideBarService } from '../side-bar.service';
 })
 export class SideBarToggleComponent {
   // Communication Through Parent Component
-  
   // @Output() toggle: EventEmitter<null> = new EventEmitter();
 
   // @HostListener('click')

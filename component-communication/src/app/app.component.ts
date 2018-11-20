@@ -8,7 +8,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'component-communication';
   // Communication Through Parent Component
-  
   // sideBarIsOpened = false;
 
   // toggleSideBar(shouldOpen: boolean) {

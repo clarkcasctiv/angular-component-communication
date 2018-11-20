@@ -8,7 +8,6 @@ import { Component, HostBinding, Input, OnInit } from '@angular/core';
 })
 export class SideBarComponent implements OnInit {
   // Communication Through Parent Component
-  
   // @HostBinding('class.is-open')
   // @Input()
   // isOpen = false;
