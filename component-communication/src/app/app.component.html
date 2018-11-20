@@ -8,8 +8,14 @@
   -->
 
   <!-- Communication Through Parent Component -->
-  <app-side-bar [isOpen]="sideBarIsOpened"></app-side-bar>
-  <app-side-bar-toggle (toggle)="toggleSideBar()"></app-side-bar-toggle>
+  <!--
+    <app-side-bar [isOpen]="sideBarIsOpened"></app-side-bar>
+    <app-side-bar-toggle (toggle)="toggleSideBar()"></app-side-bar-toggle>
 
-  <button (click)="toggleSideBar()">Toggle SideBar</button>
+    <button (click)="toggleSideBar()">Toggle SideBar</button>
+  -->
+
+  <!-- Communication Using Service -->
+  <app-side-bar></app-side-bar>
+  <app-side-bar-toggle></app-side-bar-toggle>
 </div>

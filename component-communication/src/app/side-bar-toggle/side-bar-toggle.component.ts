@@ -7,6 +7,7 @@ import {
   EventEmitter
 } from '@angular/core';
 import { SideBarComponent } from '../side-bar/side-bar.component';
+import { SideBarService } from '../side-bar.service';
 
 @Component({
   selector: 'app-side-bar-toggle',
@@ -14,12 +15,14 @@ import { SideBarComponent } from '../side-bar/side-bar.component';
   styleUrls: ['./side-bar-toggle.component.css']
 })
 export class SideBarToggleComponent {
-  @Output() toggle: EventEmitter<null> = new EventEmitter();
+  // Communication Through Parent Component
+  
+  // @Output() toggle: EventEmitter<null> = new EventEmitter();
 
-  @HostListener('click')
-  click() {
-    this.toggle.emit();
-  }
+  // @HostListener('click')
+  // click() {
+  //   this.toggle.emit();
+  // }
 
   // By Passing Reference Of One Component To Another
 
@@ -29,4 +32,13 @@ export class SideBarToggleComponent {
   // click() {
   //   this.sidebar.toggle();
   // }
+
+  // Communication Using Service
+
+  constructor(private sideBarService: SideBarService) {}
+
+  @HostListener('click')
+  click() {
+    this.sideBarService.toggle();
+  }
 }
